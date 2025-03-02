@@ -13,3 +13,14 @@ console.log ("Welcome to Rock, Paper, Scissors")
 - once either win or loss reaches 5, display "game win" or "game loss" accordingly.
 */
 
+let rock="1"
+let paper="2"
+let scissors="3"
+
+while(true){
+    let value=prompt("imput rock, paper, or scissors")
+    if (value = rock, paper, scissors){
+        break
+    }
+}
+console.log (value)
