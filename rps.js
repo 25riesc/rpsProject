@@ -13,14 +13,25 @@ console.log ("Welcome to Rock, Paper, Scissors")
 - once either win or loss reaches 5, display "game win" or "game loss" accordingly.
 */
 
-let rock="1"
-let paper="2"
-let scissors="3"
 
-while(true){
-    let value=prompt("imput rock, paper, or scissors")
-    if (value = rock, paper, scissors){
-        break
-    }
+// do{
+//     value=prompt("input rock, paper, or scissors");
+
+// } while( !(value == "rock" || value == "paper" || value == "scissors")) 
+//     console.log(value);
+
+
+let rand = 0
+rand=Math.floor(Math.random()*3)
+console.log(rand)
+if (rand>=0 && rand<1){
+    bot="rock"
 }
-console.log (value)
+if (rand>=1 && rand<2){
+    bot="paper"
+}
+if (rand>=2 && rand<=3){
+    bot="scissors"
+}
+
+console.log(`bot chose ${bot}`)
