@@ -14,24 +14,28 @@ console.log ("Welcome to Rock, Paper, Scissors")
 */
 
 
-// do{
-//     value=prompt("input rock, paper, or scissors");
+do{
+    playerChoice=prompt("input rock, paper, or scissors");
 
-// } while( !(value == "rock" || value == "paper" || value == "scissors")) 
-//     console.log(value);
+} while( !(playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors")) 
+    console.log(`player chose ${playerChoice}`);
 
 
+// bot choice randomizer
+let rock=1
+let paper=2
+let scissors=3
 let rand = 0
 rand=Math.floor(Math.random()*3)
 console.log(rand)
 if (rand>=0 && rand<1){
-    bot="rock"
+    botChoice="rock"
 }
 if (rand>=1 && rand<2){
-    bot="paper"
+    botChoice="paper"
 }
 if (rand>=2 && rand<=3){
-    bot="scissors"
+    botChoice="scissors"
 }
 
-console.log(`bot chose ${bot}`)
+console.log(`bot chose ${botChoice}`)
