@@ -19,7 +19,7 @@ let rand = 0
 let botScore=0
 let playerScore=0
 
-while(playerScore<5){
+while(playerScore<5 && botScore<5){
     rand=Math.floor(Math.random()*3)
 if (rand>=0 && rand<1){
     botChoice="rock"
@@ -45,8 +45,8 @@ do{
 if (botChoice==playerChoice){
     
     console.log(`${botChoice} ties with ${playerChoice}, go again, no points awarded`)
-    botScore=botScore
-    playerScore=playerScore
+ 
+ 
     console.log(`computer score= ${botScore}`)
     console.log(`player score= ${playerScore}`)
 }
@@ -57,7 +57,7 @@ else if ((playerChoice=="paper" && botChoice=="rock") || (playerChoice=="scissor
         
         console.log(`${playerChoice} beats ${botChoice}, player wins`)
     playerScore=playerScore+1
-    botScore=botScore
+    
     console.log(`computer score= ${botScore}`)
     console.log(`player score= ${playerScore}`)
     }
@@ -70,7 +70,7 @@ else if ((playerChoice=="paper" && botChoice=="rock") || (playerChoice=="scissor
             
             console.log(`${botChoice} beats ${playerChoice}, computer wins`)
             botScore=botScore+1
-            playerScore=playerScore
+        
             console.log(`computer score= ${botScore}`)
             console.log(`player score= ${playerScore}`)
         }
