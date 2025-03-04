@@ -15,13 +15,12 @@ console.log ("Welcome to Rock, Paper, Scissors")
 
 
 
-
-
 // bot choice randomizer
-let rock=1
+let rock =1
 let paper=2
 let scissors=3
 let rand = 0
+
 rand=Math.floor(Math.random()*3)
 console.log(rand)
 if (rand>=0 && rand<1){
@@ -42,8 +41,30 @@ do{
 console.log(`player chose ${playerChoice}`);
 console.log(`bot chose ${botChoice}`)
 
+
+//if player imput = bot imput, tie
 if (botChoice==playerChoice){
-console.log(`${botChoice} ties with ${playerChoice}, go again`)
+console.log(`${botChoice} ties with ${playerChoice}, go again, no points awarded`)
+do{
+    playerChoice=prompt("input rock, paper, or scissors");
+
+} while( !(playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors" )) 
+console.log(`player chose ${playerChoice}`);
+console.log(`bot chose ${botChoice}`)
 }
+
+// player win condition
+if ((playerChoice=="paper" && botChoice=="rock") || (playerChoice=="scissors" 
+    && botChoice=="paper") || (playerChoice=="rock" && botChoice=="scissors")){
+        console.log(`player chose ${playerChoice}`);
+        console.log(`bot chose ${botChoice}`)
+        console.log(`${playerChoice} beats ${botChoice}, player wins`)
+    
+    do{
+        playerChoice=prompt("input rock, paper, or scissors");
+    
+    } while( !(playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors" )) 
+    }
+
 
 
