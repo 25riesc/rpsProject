@@ -68,3 +68,18 @@ if ((playerChoice=="paper" && botChoice=="rock") || (playerChoice=="scissors"
 
 
 
+    //bot win condition
+    if ((botChoice=="paper" && playerChoice=="rock") || (botChoice=="scissors" 
+        && playerChoice=="paper") || (botChoice=="rock" && playerChoice=="scissors")){
+            console.log(`player chose ${playerChoice}`);
+            console.log(`bot chose ${botChoice}`)
+            console.log(`${botChoice} beats ${playerChoice}, computer wins`)
+        
+        do{
+            playerChoice=prompt("input rock, paper, or scissors");
+        
+        } while( !(playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors" )) 
+        }
+      
+
+
