@@ -19,8 +19,9 @@ let rand = 0
 let botScore=0
 let playerScore=0
 
+
 while(playerScore<5 && botScore<5){
-    rand=Math.floor(Math.random()*3)
+    rand=(Math.random()*3)
 if (rand>=0 && rand<1){
     botChoice="rock"
 }
@@ -34,21 +35,18 @@ if (rand>=2 && rand<=3){
 //player prompt
 do{
     playerChoice=prompt("input rock, paper, or scissors");
-    console.log(`player chose ${playerChoice}`);
-    console.log(`bot chose ${botChoice}`)
+    playerChoice = playerChoice.toLowerCase()
+    
     
 } while( !(playerChoice == "rock" || playerChoice == "paper" || playerChoice == "scissors" ) )
 
-
+    console.log(`player chose ${playerChoice}`);
+    console.log(`bot chose ${botChoice}`)
 
 //if player imput = bot imput, tie
 if (botChoice==playerChoice){
     
     console.log(`${botChoice} ties with ${playerChoice}, go again, no points awarded`)
- 
- 
-    console.log(`computer score= ${botScore}`)
-    console.log(`player score= ${playerScore}`)
 }
 
 // player win condition
@@ -57,11 +55,7 @@ else if ((playerChoice=="paper" && botChoice=="rock") || (playerChoice=="scissor
         
         console.log(`${playerChoice} beats ${botChoice}, player wins`)
     playerScore=playerScore+1
-    
-    console.log(`computer score= ${botScore}`)
-    console.log(`player score= ${playerScore}`)
     }
-
 
 
     //bot win condition
@@ -69,10 +63,9 @@ else if ((playerChoice=="paper" && botChoice=="rock") || (playerChoice=="scissor
         && playerChoice=="paper") || (botChoice=="rock" && playerChoice=="scissors")){
             
             console.log(`${botChoice} beats ${playerChoice}, computer wins`)
-            botScore=botScore+1
-        
-            console.log(`computer score= ${botScore}`)
-            console.log(`player score= ${playerScore}`)
+            botScore=botScore+1          
         }
-
+        console.log(`computer score= ${botScore}`)
+        console.log(`player score= ${playerScore}`)
     }
+    
